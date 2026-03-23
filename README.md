@@ -7,32 +7,20 @@ Symptom Columns (Symptom_0 to Symptom_16) : Each column represents a possible sy
 
 ## Data Preprocessing
 
-To make the dataset usable for machine learning:
-
-Combine Symptoms
-All symptom columns are merged into a single list per row
+1) To make the dataset usable for machine learning:
+2) Combine Symptoms
+3) All symptom columns are merged into a single list per row
 Example:
 ["fever", "headache", "fatigue"]
-
-Clean Data
-
-Remove empty values ("", "None")
-
-Standardize symptom names
-
-Feature Encoding
-
-Use MultiLabelBinarizer to convert symptoms into binary features
-
-Each symptom becomes a column with:
-
-1 → symptom present
-
-0 → symptom absent
-
-Label Encoding
-
-Convert disease names into numeric labels for model training
+4) Clean Data
+5) Remove empty values ("", "None")
+6) Standardize symptom names
+7) Feature Encoding
+------Use MultiLabelBinarizer to convert symptoms into binary features
+8) Each symptom becomes a column with  :
+     1 → symptom present
+     0 → symptom absent
+9) Label Encoding :  Convert disease names into numeric labels for model training
 
 ## 📊 Exploratory Data Analysis
 
@@ -60,7 +48,39 @@ The following models were tested:
 
 Random Forest achieved the highest accuracy and stability.
 
-## 🧠 How It Works
+## 📊 Model Performance
+
+The following machine learning models were trained and evaluated on the dataset:
+
+| Model              | Accuracy |
+|-------------------|----------|
+| Decision Tree     | 0.6667   |
+| Random Forest     | 0.8889   |
+| Naive Bayes       | 1.0000   |
+| K-Nearest Neighbors (KNN) | 1.0000 |
+
+> ⚠️ Note: Extremely high accuracy (1.0) may indicate overfitting due to dataset size or feature simplicity.
+
+---
+
+## 📈 Evaluation Details
+
+- Dataset size: 313 samples  
+- Number of features: 152  
+- Cross-validation used for reliable evaluation  
+- Confusion Matrix used for visualization  
+
+---
+
+## 🧠 Insights
+
+- Random Forest provides a balanced and reliable performance  
+- Naive Bayes and KNN achieved perfect accuracy but may overfit  
+- Decision Tree performs lower compared to ensemble methods  
+
+---
+
+##  How It Works
 
 1. User enters symptoms  
 2. Symptoms are cleaned and formatted  
@@ -102,19 +122,30 @@ Malaria (3%)
 
 
 
+## 🌟 Overview
 
-# 🎯 Key Features
-Symptom preprocessing and cleaning
-Multi-label feature encoding
-Machine learning model training (Random Forest)
-Model evaluation (accuracy & cross-validation)
-Confusion matrix visualization
-Top-N disease prediction with confidence
+An intelligent chatbot that predicts diseases based on user symptoms using a trained **Random Forest model**.  
+It provides **top predictions with confidence scores** and helps users understand possible health conditions.
 
+---
 
-#💡 Objective
-To build an intelligent system that can assist users in identifying potential diseases based on symptoms, improving early awareness and supporting healthcare decision-making.
+## 🎯 Features
 
+✨ Symptom-based disease prediction  
+✨ Top 3 predictions with probability  
+✨ Interactive chatbot UI (Streamlit)  
+✨ Clean and fast ML pipeline  
+✨ Real-time predictions  
+
+    project/
+    │── app.py
+    │── train_model.py
+    │── requirements.txt
+    │── README.md
+    │── models/
+    │   ├── disease_model.pkl
+    │   ├── mlb.pkl
+    │   ├── label_encoder.pkl
 
 
 
