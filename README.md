@@ -1,4 +1,9 @@
-# Symptom-to-Disease-Chatbot
+# 🩺 Disease Prediction Chatbot
+
+## 📸 App Preview
+
+![Chatbot UI](chatbot.png)
+
 The dataset used in the Symptom-to-Disease Chatbot project consists of structured medical records where each entry represents a disease along with its associated symptoms. The primary objective of this data is to map combinations of symptoms to a specific disease, enabling machine learning models to learn patterns for accurate prediction.
 
 ## 📁 Dataset Structure
@@ -149,6 +154,11 @@ It provides **top predictions with confidence scores** and helps users understan
 
 
 
+
+## 🌐 Live Demo
+
+🔗 **Chatbot Web App:**  
+http://localhost:8501/
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
